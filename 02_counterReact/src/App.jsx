@@ -7,6 +7,19 @@ function App() {
 
   const [counter, setCouneter] = useState(0);
 
+  // if  i want to incremet more than one time setter function then 
+
+  const moreThanOneTimeIncremet = () => {
+    setCouneter((prevCounter) => prevCounter + 1);
+    setCouneter((prevCounter) => prevCounter + 1);
+    setCouneter((prevCounter) => prevCounter + 1);
+    setCouneter((prevCounter) => prevCounter + 1);
+    setCouneter((prevCounter) => prevCounter + 1);
+
+  }
+
+
+
   const Increment = () => {
     setCouneter(counter + 1);
   }
@@ -26,6 +39,9 @@ function App() {
       <br />
       <br />
       <button onClick={Decrement}>Decrement:{counter}</button>
+      <br />
+      <br />
+      <button onClick={moreThanOneTimeIncremet}>IncremenMoreThanOneTime:{counter}</button>
     </>
   )
 }
